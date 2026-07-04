@@ -30,6 +30,58 @@
 
     <main id="top">
       <section class="hero">
+        <div class="ink-anime-layer" aria-hidden="true">
+          <svg viewBox="0 0 1180 760" role="img">
+            <defs>
+              <filter id="ink-bleed">
+                <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="8" />
+                <feDisplacementMap in="SourceGraphic" scale="3" />
+              </filter>
+              <linearGradient id="brush-fade" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#050505" stop-opacity="0.2" />
+                <stop offset="0.7" stop-color="#050505" stop-opacity="0.04" />
+                <stop offset="1" stop-color="#050505" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+
+            <g class="ink-wash" filter="url(#ink-bleed)">
+              <path d="M42 586 C162 430 275 391 411 448 C500 486 524 594 438 671 C318 779 138 735 42 586Z" />
+              <path class="scarlet-wash" d="M845 76 C955 28 1068 57 1128 153 C1050 141 973 170 918 222 C884 254 841 240 809 205 C774 166 789 101 845 76Z" />
+            </g>
+
+            <g class="pilot-echo" filter="url(#ink-bleed)">
+              <path class="portrait-line" d="M242 444 C211 454 192 493 198 537 C205 594 249 628 301 616 C351 604 376 556 363 504 C350 456 302 426 242 444Z" />
+              <path class="portrait-line" d="M212 486 C247 446 306 438 358 471" />
+              <path class="portrait-line" d="M241 452 C230 483 233 512 252 539" />
+              <path class="portrait-line" d="M292 444 C279 489 287 531 326 570" />
+              <path class="portrait-line" d="M214 608 C248 646 311 662 367 632" />
+              <path class="portrait-line" d="M178 674 C242 633 332 633 416 683" />
+              <path class="thin-line" d="M154 547 L112 571 M390 527 L448 506" />
+            </g>
+
+            <g class="scarlet-echo" filter="url(#ink-bleed)">
+              <path class="red-line" d="M884 152 C918 112 976 104 1025 131 C1068 155 1080 198 1058 231 C1027 279 948 282 897 245 C859 217 854 186 884 152Z" />
+              <path class="red-line" d="M871 177 C918 149 985 151 1052 190" />
+              <path class="red-line" d="M914 124 C895 172 902 214 948 253" />
+              <path class="red-line" d="M1006 132 C985 177 990 216 1036 248" />
+              <path class="portrait-line" d="M835 297 C902 252 1017 257 1104 314" />
+              <path class="thin-line" d="M790 230 L722 187 M1058 270 L1146 296" />
+            </g>
+
+            <g class="sync-spear">
+              <path d="M684 611 L1104 302" />
+              <path d="M1036 313 L1104 302 L1077 366" />
+              <path d="M684 611 L744 565" />
+            </g>
+
+            <g class="sync-rings">
+              <circle cx="741" cy="346" r="72" />
+              <circle cx="741" cy="346" r="118" />
+              <path d="M586 346 H896" />
+              <path d="M741 191 V501" />
+            </g>
+          </svg>
+        </div>
         <div class="hero-copy">
           <p class="eyebrow">Biotech · MedTech · Capital Formation</p>
           <h1>把医学创新翻译成可投资、可退出、可产业化的判断。</h1>
@@ -47,6 +99,11 @@
           <div class="panel-topline">
             <span>INVESTMENT OS</span>
             <span>LIVE</span>
+          </div>
+          <div class="mecha-eye" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div class="scanline"></div>
           <dl class="metrics">

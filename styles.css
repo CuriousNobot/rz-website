@@ -156,6 +156,8 @@ main {
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
   gap: clamp(32px, 6vw, 88px);
@@ -164,6 +166,69 @@ main {
   max-width: var(--max);
   margin: 0 auto;
   padding: clamp(56px, 10vh, 110px) clamp(20px, 4vw, 48px) clamp(38px, 8vh, 72px);
+}
+
+.ink-anime-layer {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ink-anime-layer svg {
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  opacity: 0.92;
+}
+
+.ink-wash path {
+  fill: url("#brush-fade");
+}
+
+.ink-wash .scarlet-wash {
+  fill: rgba(172, 24, 31, 0.08);
+}
+
+.portrait-line,
+.thin-line,
+.sync-rings circle,
+.sync-rings path {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.portrait-line {
+  stroke-width: 3.2;
+}
+
+.thin-line {
+  stroke-width: 1.4;
+}
+
+.red-line {
+  fill: none;
+  stroke: rgba(172, 24, 31, 0.38);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.4;
+}
+
+.sync-spear path {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.18);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.sync-rings circle,
+.sync-rings path {
+  stroke-width: 1.1;
+  stroke-dasharray: 10 12;
 }
 
 .hero-copy {
@@ -297,10 +362,69 @@ h3 {
 
 .panel-topline {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   color: var(--muted);
+}
+
+.mecha-eye {
+  position: absolute;
+  top: 76px;
+  right: 32px;
+  z-index: 2;
+  width: 146px;
+  height: 58px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  clip-path: polygon(6% 48%, 27% 6%, 72% 6%, 94% 48%, 73% 92%, 27% 92%);
+  background:
+    linear-gradient(90deg, transparent 0 18%, rgba(172, 24, 31, 0.22) 18% 24%, transparent 24% 100%),
+    repeating-linear-gradient(0deg, transparent 0 7px, rgba(0, 0, 0, 0.08) 7px 8px),
+    rgba(255, 255, 255, 0.48);
+  opacity: 0.82;
+}
+
+.mecha-eye::before,
+.mecha-eye::after,
+.mecha-eye span {
+  position: absolute;
+  content: "";
+}
+
+.mecha-eye::before {
+  inset: 11px 28px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mecha-eye::after {
+  top: 50%;
+  left: 16px;
+  width: 114px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.48);
+  transform: translateY(-50%);
+}
+
+.mecha-eye span:nth-child(1) {
+  inset: 16px 64px;
+  background: rgba(172, 24, 31, 0.52);
+}
+
+.mecha-eye span:nth-child(2) {
+  top: 13px;
+  bottom: 13px;
+  left: 42px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.mecha-eye span:nth-child(3) {
+  top: 13px;
+  right: 42px;
+  bottom: 13px;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.24);
 }
 
 .scanline {
@@ -595,6 +719,16 @@ h3 {
     min-height: auto;
   }
 
+  .ink-anime-layer {
+    inset: 0 -180px auto -160px;
+    height: 740px;
+  }
+
+  .ink-anime-layer svg {
+    min-height: 740px;
+    opacity: 0.58;
+  }
+
   .signal-panel {
     min-height: auto;
   }
@@ -651,6 +785,35 @@ h3 {
 
   .signal-panel {
     padding: 18px;
+  }
+
+  .mecha-eye {
+    top: 72px;
+    right: 22px;
+    width: 112px;
+    height: 44px;
+    opacity: 0.58;
+  }
+
+  .mecha-eye::before {
+    inset: 9px 22px;
+  }
+
+  .mecha-eye::after {
+    left: 13px;
+    width: 86px;
+  }
+
+  .mecha-eye span:nth-child(1) {
+    inset: 13px 49px;
+  }
+
+  .mecha-eye span:nth-child(2) {
+    left: 34px;
+  }
+
+  .mecha-eye span:nth-child(3) {
+    right: 34px;
   }
 
   .signal-panel::before {
