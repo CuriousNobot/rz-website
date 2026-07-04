@@ -29,7 +29,7 @@ body {
     radial-gradient(circle at 50% -10%, rgba(0, 0, 0, 0.08), transparent 34rem),
     linear-gradient(180deg, #fbfbf7 0%, #f2f2ed 48%, #ffffff 100%);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Avenir Next", "Helvetica Neue", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "PingFang SC", "Microsoft YaHei", sans-serif;
   line-height: 1.5;
 }
@@ -105,6 +105,7 @@ a {
 .brand-text,
 .nav-links a,
 .eyebrow,
+.section-code,
 .panel-topline,
 .card-index,
 .radar-row span,
@@ -248,13 +249,14 @@ p {
 }
 
 h1 {
-  max-width: 900px;
+  max-width: 760px;
   margin-bottom: 28px;
-  font-size: clamp(44px, 7.2vw, 92px);
+  font-size: clamp(44px, 6.4vw, 84px);
   font-weight: 730;
-  line-height: 0.99;
+  line-height: 1.02;
   letter-spacing: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 h2 {
@@ -263,6 +265,7 @@ h2 {
   font-weight: 700;
   line-height: 1.04;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 h3 {
@@ -273,11 +276,12 @@ h3 {
 }
 
 .hero-lede {
-  max-width: 780px;
+  max-width: 660px;
   margin-bottom: 34px;
   color: #2e2e2a;
   font-size: clamp(16px, 1.7vw, 20px);
   line-height: 1.8;
+  text-wrap: pretty;
 }
 
 .hero-actions,
@@ -504,6 +508,7 @@ h3 {
   color: #121210;
   font-size: clamp(20px, 3.2vw, 36px);
   line-height: 1.42;
+  text-wrap: balance;
 }
 
 .split-section,
@@ -522,8 +527,13 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.section-heading .eyebrow {
+.section-heading .section-code {
   margin: 0;
+}
+
+.section-code {
+  color: var(--soft);
+  font-variant-numeric: tabular-nums;
 }
 
 .thesis-grid {
