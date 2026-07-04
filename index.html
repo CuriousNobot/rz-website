@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RZ - 医疗行业 VC 投资人个人网站，聚焦创新药、生物技术、医疗器械与产业化判断。"
+    />
+    <title>RZ | Healthcare VC</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="signal-canvas" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="RZ homepage">
+        <span class="brand-mark">RZ</span>
+        <span class="brand-text">Healthcare VC</span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a href="#thesis">Thesis</a>
+        <a href="#radar">Radar</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Biotech · MedTech · Capital Formation</p>
+          <h1>把医学创新翻译成可投资、可退出、可产业化的判断。</h1>
+          <p class="hero-lede">
+            我关注医疗行业里真正能穿越周期的技术、产品和团队：从机制验证、临床路径、注册策略、
+            BD 交易到资本市场窗口，判断一个项目为什么值得下注，以及它如何从科学叙事走向商业结果。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="primary-action" href="#contact">提交项目</a>
+            <a class="ghost-action" href="#work">查看研究框架</a>
+          </div>
+        </div>
+
+        <aside class="signal-panel" aria-label="投资人信号面板">
+          <div class="panel-topline">
+            <span>INVESTMENT OS</span>
+            <span>LIVE</span>
+          </div>
+          <div class="scanline"></div>
+          <dl class="metrics">
+            <div>
+              <dt>Focus</dt>
+              <dd>创新药 / 器械 / BioTools</dd>
+            </div>
+            <div>
+              <dt>Lens</dt>
+              <dd>Science × Clinic × Deal</dd>
+            </div>
+            <div>
+              <dt>Stage</dt>
+              <dd>早期到成长阶段</dd>
+            </div>
+          </dl>
+          <div class="thesis-ticker">
+            <span>Target ID</span>
+            <span>Clinical Risk</span>
+            <span>BD Optionality</span>
+            <span>Exit Window</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section intro-band" aria-label="个人定位">
+        <p>
+          这是一个面向创业者、LP、产业方和潜在合作伙伴的专业入口：不是简历堆叠，而是展示我如何看项目、
+          如何判断产业机会、如何帮助公司把科学资产变成融资、交易和商业化路径。
+        </p>
+      </section>
+
+      <section class="section split-section" id="thesis">
+        <div class="section-heading">
+          <p class="eyebrow">Investment Thesis</p>
+          <h2>我优先看三类机会。</h2>
+        </div>
+        <div class="thesis-grid">
+          <article class="thesis-card">
+            <span class="card-index">01</span>
+            <h3>能被临床需求拉动的源头创新</h3>
+            <p>
+              不是只看机制新，而是看疾病负担、终点设计、患者分层和现有治疗缺口是否共同支撑一个清晰的临床价值。
+            </p>
+          </article>
+          <article class="thesis-card">
+            <span class="card-index">02</span>
+            <h3>具备交易价值的差异化资产</h3>
+            <p>
+              关注同类竞品、专利边界、临床节奏、跨境 BD 可选项，以及大药企愿意在什么节点为确定性付费。
+            </p>
+          </article>
+          <article class="thesis-card">
+            <span class="card-index">03</span>
+            <h3>能够落地产业资源的技术平台</h3>
+            <p>
+              优先判断平台是否能持续产出资产，是否有工艺、注册、供应链或产业合作壁垒，而不是停留在概念故事。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section radar-section" id="radar">
+        <div class="section-heading">
+          <p class="eyebrow">Market Radar</p>
+          <h2>投研雷达。</h2>
+        </div>
+        <div class="radar-layout">
+          <div class="radar-visual" aria-hidden="true">
+            <div class="radar-grid">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="radar-sweep"></div>
+            <ul class="radar-points">
+              <li style="--x: 58%; --y: 22%">ADC</li>
+              <li style="--x: 32%; --y: 48%">AI Drug</li>
+              <li style="--x: 68%; --y: 62%">MedTech</li>
+              <li style="--x: 44%; --y: 73%">Longevity</li>
+            </ul>
+          </div>
+          <div class="radar-copy">
+            <div class="radar-row">
+              <span>01</span>
+              <p>创新药：ADC、双抗、多抗、细胞治疗、核药、AI 药物发现。</p>
+            </div>
+            <div class="radar-row">
+              <span>02</span>
+              <p>器械与诊断：介入、影像、机器人、IVD、手术耗材和院内高频使用场景。</p>
+            </div>
+            <div class="radar-row">
+              <span>03</span>
+              <p>平台与供应链：BioTools、CGT 上游、合成生物学、关键原料和工艺能力。</p>
+            </div>
+            <div class="radar-row">
+              <span>04</span>
+              <p>跨境机会：中美欧注册差异、license-out 窗口、海外临床与产业合作。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work-section" id="work">
+        <div class="section-heading">
+          <p class="eyebrow">How I Work</p>
+          <h2>我的工作方式。</h2>
+        </div>
+        <div class="work-columns">
+          <article>
+            <h3>项目判断</h3>
+            <p>
+              用科学机制、临床路径、竞品格局、专利边界、注册难度和商业化支付共同校验，不靠单一故事做判断。
+            </p>
+          </article>
+          <article>
+            <h3>融资叙事</h3>
+            <p>
+              帮助团队把复杂技术翻译成投资人能快速理解的价值主线，包括市场空间、差异化、里程碑和资金用途。
+            </p>
+          </article>
+          <article>
+            <h3>产业连接</h3>
+            <p>
+              对接潜在 BD、临床专家、产业资源和后续资本，帮助公司尽早验证合作窗口与退出路径。
+            </p>
+          </article>
+          <article>
+            <h3>内容输出</h3>
+            <p>
+              持续形成行业 memo、竞品拆解、交易复盘和主题研究，让外部伙伴看到稳定、可验证的判断体系。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Deal Flow / LP / Industry Partner</p>
+          <h2>适合联系我的项目。</h2>
+          <p>
+            如果你正在推进医疗创新项目融资、产业合作、跨境 BD 或主题研究合作，请直接给出项目阶段、
+            核心数据、融资目标和希望获得的支持。好的材料应该让人快速判断：疾病价值、技术差异、临床证据、
+            团队能力和下一轮关键里程碑。
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="primary-action" href="mailto:hello@example.com">hello@example.com</a>
+          <a class="ghost-action" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>RZ Healthcare VC</span>
+      <span>Built for disciplined conviction.</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
