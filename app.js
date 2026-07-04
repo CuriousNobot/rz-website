@@ -60,7 +60,7 @@ function draw() {
 
       if (dist < 136) {
         const alpha = (1 - dist / 136) * 0.2;
-        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+        ctx.strokeStyle = `rgba(0, 0, 0, ${alpha})`;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
@@ -70,7 +70,7 @@ function draw() {
   }
 
   for (const p of particles) {
-    ctx.fillStyle = "rgba(255, 255, 255, 0.72)";
+    ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
     ctx.fill();
